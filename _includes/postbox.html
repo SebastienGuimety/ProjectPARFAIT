@@ -1,0 +1,86 @@
+
+
+<!-- begin post 
+
+
+{% assign author = site.authors[stories.author] %}
+<div class="card">
+    <a href="{{ post.url | absolute_url }}">
+        {% if post.image %} <img class="rounded mb-4" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}"> {% endif %}
+    </a>
+    <div class="card-block">
+        <h2 class="card-title h4 serif-font"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        <p class="card-text text-muted">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
+        <div class="metafooter">
+            <div class="wrapfooter small d-flex align-items-center">
+                <span class="author-meta">
+                By  <span class="post-name"> {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}, </span>             
+                on <span class="post-date">{{ post.date | date_to_string }}</span>
+                </span>               
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ end post -->
+
+
+<div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <div class="card-body" style="text-align: center;">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+            <a href="" style="color: #DE6B61; border-color: #DE6B61;" class="btn btn-dark">Read More</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-lg-4 mb-4">
+    <div class="card">
+        <img src="img/2.jpg" alt="" class="card-img-top">
+        <div class="card-body" >
+          <h5 class="card-title">Sunset</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+            <a href="" style="color: #DE6B61; border-color: #DE6B61;" class="btn btn-dark btn-sm ">Read More</a>         
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 mb-4">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Sunset</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+            <a href="" style="color: #DE6B61; border-color: #DE6B61;" class="btn btn-dark btn-sm">Read More</a>        
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 mb-4">
+  <div class="card">
+      <img src="img/bg-about.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Oui</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+          <a href="" style="color: #DE6B61; border-color: #DE6B61;" class="btn btn-dark btn-sm">Read More</a>        
+      </div>
+  </div>
+</div>
+
+
+{% for meet in site.stories %}
+
+<div class="col-lg-4 mb-4">
+    <div class="card">
+        <img src="img/bg-about.jpg" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ stories.title }}</h5>
+          <p class="card-text">{{ stories.subtitle }}</p>
+            <a href="" style="color: #DE6B61; border-color: #DE6B61;" class="btn btn-dark btn-sm">Read More</a>        
+        </div>
+    </div>
+  </div>
+
+{% endfor %}

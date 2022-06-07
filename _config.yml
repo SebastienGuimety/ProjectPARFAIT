@@ -1,0 +1,56 @@
+title:              Project PARFAIT
+email:              your-email@example.com
+icon:               "/img/parfaitLogo.png"
+description:        
+author:             PARFAIT 
+baseurl:            ""
+url:                ""
+# Social Profiles
+twitter_username:   SBootstrap
+github_username:    StartBootstrap
+facebook_username:  StartBootstrap
+instagram_username:  
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           10
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+
+
+collections:
+  stories:
+    output: true
+  meetings:
+    output: true
+
+    
+
+
+defaults:
+# Turn the profile sidebar on for all pages by default, except for the
+# collections, where it is off and replaced by useful things on the sidebar.
+# To override this one a page, use
+#    show_profile: false
+# to hide the profile.
+  -
+    scope:
+      path: ""
+    values:
+      show_profile: false
+  -
+    scope:
+      path: "posts"
+    values:
+      show_tags: true
+      show_profile: false
+      layout: defaults/list
+
+

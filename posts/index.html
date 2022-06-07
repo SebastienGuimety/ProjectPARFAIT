@@ -1,0 +1,76 @@
+---
+layout: page
+title: Publications
+show_tags: true
+background: '/img/bg-post.jpg'
+---
+
+
+
+
+{% capture written_year %}'None'{% endcapture %}
+{% for post in paginator.posts %}
+
+<article class="post-preview card-post">
+
+  
+  <h3 style="font-size: 1.12em;" class="">
+    <!-- author -->
+    <span style="font-weight: normal;">{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %} ,</span>
+
+    <!-- title , lien normal -->
+    <a style="font-weight: bold;" href=" {% if post.lienofficiel %}{{ post.lienofficiel }}{% else %}{{ post.url | prepend: site.baseurl | replace: '//', '/' }}{% endif %} " target="_blank" .>
+        "{{ post.title }}"
+    </a>
+    
+    <!-- subtitle -->
+    <span style="font-style: italic; font-weight: normal;">{{ post.subtitle }}</span>
+    <br>
+    <!-- lien hal-->
+    <a style="font-size: 20px; font-weight: bold; font-style: italic;" href="{{ post.lienhal }}" target="_blank">(Lien Hal)</a>
+  </h3>
+
+
+  <!-- All tag for the post-->
+  <div>
+    {% for tag in post.tags %}
+        <span class="d-inline-block border rounded p-1 mr-1 mb-1 tag tag-{{ tag | slugify}}">
+            {{ tag }}
+        </span>
+    {% endfor %}
+  </div>
+  
+  <hr>
+  <br>
+
+</article>
+
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+
+<div class="clearfix">
+
+  {% if paginator.previous_page %}
+  <a class="btn btn-primary float-right" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+    
+    Newer<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a class="btn btn-primary float-left" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+   
+    Older<span class="d-none d-md-inline"> Posts</span></a>
+  {% endif %}
+
+</div>
+
+{% endif %}
+
+
+<script type="text/javascript">
+
+  
+
+</script>

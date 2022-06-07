@@ -1,0 +1,132 @@
+---
+layout: blognews
+title: News
+description: 
+background: '/img/bg-blog.jpg'
+---
+
+<!-- Home Intro
+================================================== -->
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container-fluid" style="height: 100%; ">
+    <h2 style="text-align: center;">Meetings</h2>
+    <br>
+            
+        {% for meet in site.meetings %}
+
+        <article class="post-preview">
+        <a href="{% if meet.lien %}
+        {{ meet.lien }}
+        {% else %}
+        {{ meet.url | prepend: site.baseurl | replace: '//', '/' }}
+        {% endif %}
+        ">
+            <h3 style="font-size: 25px;" class="post-title">{{ meet.title }}</h3>
+            {% if meet.subtitle %}
+            <h4 class="post-subtitle">{{ meet.subtitle }}</h4>
+            {% endif %}
+        </a>
+        <p class="post-meta">Posted by
+            {% if meet.author %}
+            {{ meet.author }}
+            {% else %}
+            {{ meet.author }}
+            {% endif %}
+            on {{ meet.date | date: '%B %d, %Y' }} 
+        </p>
+        </article>
+
+        <hr>
+
+        {% endfor %}
+</div>
+
+
+<!--
+<div class="container-fluid" style="height: 100%; ">
+    <div class="row" style="height: 100%;">
+
+
+       <div class="col-md-6 left">
+           <h2>Meetings</h2>
+            
+            {% for meet in site.meetings %}
+
+            <article class="post-preview">
+            <a href="{% if meet.lien %}
+            {{ meet.lien }}
+            {% else %}
+            {{ meet.url | prepend: site.baseurl | replace: '//', '/' }}
+            {% endif %}
+            ">
+                <h3 style="font-size: 20px;" class="post-title">{{ meet.title }}</h3>
+                {% if meet.subtitle %}
+                <h4 class="post-subtitle">{{ meet.subtitle }}</h4>
+                {% endif %}
+            </a>
+            <p class="post-meta">Posted by
+                {% if meet.author %}
+                {{ meet.author }}
+                {% else %}
+                {{ meet.author }}
+                {% endif %}
+                on {{ meet.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=meet.content %}
+            </p>
+            </article>
+
+            <hr>
+
+            {% endfor %}
+       </div>
+       <div class="col-md-6 right">
+           <h2>News</h2>
+            <p>oui oui oui ouo</p>
+       </div>
+    </div>
+</div>
+
+-->
+
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container" style="padding-bottom: 50px; padding-top: 50px;">
+    <div class="row" style="text-align: center;">
+        <div class="col-lg-8 offset-lg-2">
+            <h3>Blog</h3>
+        </div>
+    </div>
+</div>
+<br>
+<section id="gallery">
+    <div class="container">
+        <div class="row">
+            {% for blog in site.stories %}
+
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="{{ blog.image }}" alt="" class="card-img-top">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ blog.title }}</h5>
+                    <p class="card-text">{{ blog.subtitle }}</p>
+                        <a href="" style="color: #DE6B61; border-color: #DE6B61;" class="btn btn-dark btn-sm">Read More</a>        
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
