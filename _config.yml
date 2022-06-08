@@ -1,6 +1,6 @@
 title:              Project PARFAIT
 email:              your-email@example.com
-icon:               "img/parfaitLogo.png"
+icon:               "/img/parfaitLogo.png"
 description:        
 author:             PARFAIT 
 baseurl:            "/ProjectPARFAIT"
