@@ -38,6 +38,7 @@ Assuming there are no errors and the site is building properly, follow these ste
     ```
     
 2. For each new meeting in the `_meetings` directory, update the front matter. Example:
+
   ```markdown
     ---
     layout: post
@@ -45,7 +46,7 @@ Assuming there are no errors and the site is building properly, follow these ste
     subtitle: "test meeting"
     author: none
     ---
-    ```
+  ```
 
 6. Build your site: `bundle exec jekyll serve`
 7. (Optional) Export your site locally ( build _site ):  `bundle exec jekyll build` 
