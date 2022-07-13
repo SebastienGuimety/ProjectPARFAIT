@@ -3,8 +3,9 @@ email:              francesco.de-pellegrini@univ-avignon.fr
 icon:               "/img/parfaitLogo.png"
 description:        
 author:             PARFAIT 
-baseurl:            ""
-url:                ""
+
+baseurl:            "/ProjectPARFAIT"
+url:                "https://SebastienGuimety.github.io"
 
 # Social Profiles
 twitter_username:   
