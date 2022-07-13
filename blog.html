@@ -22,17 +22,16 @@ background: '/img/bg-blog.jpg'
         {% for meet in site.meetings %}
 
         <article class="post-preview">
-        <a href="{% if meet.lien %}
-        {{ meet.lien }}
-        {% else %}
-        {{ meet.url | prepend: site.baseurl | replace: '//', '/' }}
-        {% endif %}
+        <a href="
         ">
             <h3 style="font-size: 25px;" class="post-title">{{ meet.title }}</h3>
             {% if meet.subtitle %}
             <h4 class="post-subtitle">{{ meet.subtitle }}</h4>
+            <br>
+            <h5 class="post-subtitle">{{ meet.datemeet }}</h5>
             {% endif %}
         </a>
+        <!--
         <p class="post-meta">Posted by
             {% if meet.author %}
             {{ meet.author }}
@@ -41,6 +40,7 @@ background: '/img/bg-blog.jpg'
             {% endif %}
             on {{ meet.date | date: '%B %d, %Y' }} 
         </p>
+        -->
         </article>
 
         <hr>
