@@ -1,5 +1,18 @@
 # [Project PARFAIT](https://sebastienguimety.github.io/ProjectPARFAIT/) 
 
+## Installation Real Website ( https://parfait.univ-avignon.fr/ )
+
+1. Clone the repository, place it in a folder
+2. Modify the _config.yml file, replace   baseurl:  "/ProjectPARFAIT" to baseurl: ""
+                                          and url:  "https://SebastienGuimety.github.io" to url: ""
+3. Build your site: `bundle exec jekyll serve` , You should see a link locally after doing the command: example `"http://127.0.0.1:4000/"`
+4. Once all changes are made locally, use the command :  `bundle exec jekyll build`
+5. You should see a file named _site
+6. Open filezilla or other software to transfer the _site folder to the virtual machine.
+7. In filezilla , on the VM side , go to the folder /var/www/html/, and replace the entire file with the previously generated _site
+8. Verify the change on https://parfait.univ-avignon.fr/, changes must be seen instantly, otherwise repeat the previous steps
+
+
 
 
 ## Installation & Setup
